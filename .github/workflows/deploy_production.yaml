@@ -25,10 +25,10 @@ jobs:
         uses: jsmith/changes-since-last-tag@v0.4.1
 
       - if: steps.mobile_changes.outputs.any_changed == 'true'
-      - run: echo "Build android mobile here."
+        run: echo "Build android mobile here."
 
       - if: steps.tablet_changes.outputs.any_changed == 'true'
-      - run: echo "Build android tablet here."
+        run: echo "Build android tablet here."
 
   ios:
     runs-on: ubuntu-latest
@@ -49,7 +49,7 @@ jobs:
         uses: jsmith/changes-since-last-tag@v0.4.1
 
       - if: steps.mobile_changes.outputs.any_changed == 'true'
-      - run: echo "Build iOS mobile here."
+        run: echo "Build iOS mobile here."
 
       - if: steps.tablet_changes.outputs.any_changed == 'true'
-      - run: echo "Build iOS tablet here."
+        run: echo "Build iOS tablet here."
