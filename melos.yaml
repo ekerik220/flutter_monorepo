@@ -1,0 +1,7 @@
+name: flutter_monorepo
+packages:
+  - apps/**
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
