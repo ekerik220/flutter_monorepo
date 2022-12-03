@@ -32,21 +32,21 @@ jobs:
 
   ios:
     runs-on: ubuntu-latest
-      steps:
-        - id: mobile_changes
-          with:
-            glob: apps/mobile/**
-          uses: jsmith/changes-since-last-tag@v0.4.1
+    steps:
+      - id: mobile_changes
+        with:
+          glob: apps/mobile/**
+        uses: jsmith/changes-since-last-tag@v0.4.1
 
-        - id: tablet_changes
-          with:
-            glob: apps/tablet/**
-          uses: jsmith/changes-since-last-tag@v0.4.1
+      - id: tablet_changes
+        with:
+          glob: apps/tablet/**
+        uses: jsmith/changes-since-last-tag@v0.4.1
 
-        - id: shared_changed
-          with:
-            glob: shared/**
-          uses: jsmith/changes-since-last-tag@v0.4.1
+      - id: shared_changed
+        with:
+          glob: shared/**
+        uses: jsmith/changes-since-last-tag@v0.4.1
 
       - if: steps.mobile_changes.outputs.any_changed == 'true'
       - run: echo "Build iOS mobile here."
