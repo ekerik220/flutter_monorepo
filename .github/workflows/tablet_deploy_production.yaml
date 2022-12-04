@@ -1,0 +1,17 @@
+name: tablet_deploy_production
+
+on:
+  push:
+    tags:
+      - "tablet_*.*.*"
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Build android tablet here."
+
+  ios:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Build iOS tablet here."
