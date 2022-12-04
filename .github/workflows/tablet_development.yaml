@@ -1,0 +1,18 @@
+name: tablet_development
+
+on:
+  push:
+    paths:
+      - apps/tablet/**
+      - shared/**
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Something changed in tablet or shared, so release new tablet Android dev build."
+
+  ios:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Something changed in tablet or shared, so release new tablet iOS dev build."

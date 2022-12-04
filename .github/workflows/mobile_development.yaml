@@ -1,0 +1,18 @@
+name: mobile_development
+
+on:
+  push:
+    paths:
+      - apps/mobile/**
+      - shared/**
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Something changed in mobile or shared, so release new mobile Android dev build."
+
+  ios:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Something changed in mobile or shared, so release new mobile iOS dev build."
