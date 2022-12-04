@@ -11,6 +11,7 @@ class MobileHomePage extends StatelessWidget {
         child: Column(
           children: const [
             Text('Mobile app'),
+            Text('test change'),
             SharedWidget(),
           ],
         ),
