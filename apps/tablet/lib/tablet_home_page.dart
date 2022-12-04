@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:shared/test_widget.dart';
 
 class TabletHomePage extends StatelessWidget {
   const TabletHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text(
-          'Tablet app',
-          style: TextStyle(
-            fontSize: 22,
-          ),
+        child: Column(
+          children: const [
+            Text(
+              'Tablet app',
+              style: TextStyle(
+                fontSize: 22,
+              ),
+            ),
+            TestWidget(),
+          ],
         ),
       ),
     );
